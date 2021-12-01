@@ -7,8 +7,8 @@ import {makeCancelable} from './lib/cancelablePromise';
 const mapStyles = {
   container: {
     position: 'absolute',
-    width: '100%',
-    height: '100%'
+    width: '50%',
+    height: '50%'
   },
   map: {
     position: 'absolute',
@@ -259,8 +259,8 @@ export class Map extends React.Component {
     );
 
     return (
-      <div style={containerStyles} className={this.props.className}>
-        <div style={style} ref={this.mapRef}>
+      <div style={containerStyles} className={this.props.className} id="mainContainer">
+        <div style={style} ref={this.mapRef} id="secondContainerLoadingMap">
           Loading map...
         </div>
         {this.renderChildren()}
